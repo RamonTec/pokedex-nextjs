@@ -10,13 +10,13 @@ export const Navbar = () => {
   const isActive = (path: string) => pathname.replace("/", "") === path;
 
   return (
-    <nav className="bg-white border-b border-gray-200" aria-label="Main navigation">
+    <nav className=" border-b border-gray-200" aria-label="Main navigation">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
 
           <div className="flex-shrink-0">
             <Link href="/">
-              <span className="text-xl font-bold text-gray-800">MyApp</span>
+              <span className="text-xl font-bold text-white">Inicio</span>
             </Link>
           </div>
 
@@ -47,21 +47,12 @@ export const Navbar = () => {
           </div>
 
           <div className="hidden md:flex md:items-center md:space-x-4">
-            <Link href="/">
-              <span
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors
-                  ${isActive("/") ? "bg-blue-600 text-white" : "text-gray-700 hover:bg-gray-100"}`}
-              >
-                Home
-              </span>
-            </Link>
-
             <Link href="/pokedex-v1">
               <span
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors
-                  ${isActive("/pokedex-v1") ? "bg-blue-600 text-white" : "text-gray-700 hover:bg-gray-100"}`}
+                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors text-white
+                  ${isActive("pokedex-v1") ? "bg-blue-600 " : ""}`}
               >
-                Pokédex V1
+                Pokedex V1
               </span>
             </Link>
           </div>
@@ -70,19 +61,10 @@ export const Navbar = () => {
 
       <div className={`${isOpen ? "block" : "hidden"} md:hidden`} id="mobile-menu">
         <div className="px-2 pt-2 pb-3 space-y-1">
-          <Link href="/">
-            <span
-              className={`block px-3 py-2 rounded-md text-base font-medium
-                ${isActive("/") ? "bg-blue-600 text-white" : "text-gray-700 hover:bg-gray-100"}`}
-            >
-              Home
-            </span>
-          </Link>
-
           <Link href="/pokedex-v1">
             <span
-              className={`block px-3 py-2 rounded-md text-base font-medium
-                ${isActive("/pokedex") ? "bg-blue-600 text-white" : "text-gray-700 hover:bg-gray-100"}`}
+              className={`block px-3 py-2 rounded-md text-base font-medium text-white
+                ${isActive("/pokedex") ? "bg-blue-600 " : " "}`}
             >
               Pokédex V1
             </span>
