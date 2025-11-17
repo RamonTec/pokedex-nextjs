@@ -16,7 +16,7 @@ export const Navbar = () => {
 
           <div className="flex-shrink-0">
             <Link href="/">
-              <span className="text-xl font-bold text-white">Inicio</span>
+              <span className="text-xl font-bold dark:text-white">Inicio</span>
             </Link>
           </div>
 
@@ -49,7 +49,7 @@ export const Navbar = () => {
           <div className="hidden md:flex md:items-center md:space-x-4">
             <Link href="/pokedex-v1">
               <span
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors text-white
+                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors dark:text-white
                   ${isActive("pokedex-v1") ? "bg-blue-600 " : ""}`}
               >
                 Pokedex V1
@@ -63,7 +63,7 @@ export const Navbar = () => {
         <div className="px-2 pt-2 pb-3 space-y-1">
           <Link href="/pokedex-v1">
             <span
-              className={`block px-3 py-2 rounded-md text-base font-medium text-white
+              className={`block px-3 py-2 rounded-md text-base font-medium dark:text-white
                 ${isActive("/pokedex") ? "bg-blue-600 " : " "}`}
             >
               Pokédex V1

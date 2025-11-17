@@ -85,9 +85,9 @@ export default function Home() {
               <div className="prose prose-indigo dark:prose-invert max-w-none">
                 <p className="text-gray-600 dark:text-gray-300 mb-4">
                   Podemos verificar esto al momento de usar el componente Image, en la consola del navegador en el apartado de network, veremos como se envia una request
-                  para optimizar la imagen, ahora, que pasaria si, tenemos un listado mostrando cientos de productos? Por cada imagen se enviara una peticion para
-                  optimizar la imagen.
-                  Al implementar soluciones de carga de imágenes, debemos considerar los posibles impactos en el rendimiento:
+                  para optimizar la imagen, ahora, <br /> ¿Que pasaria si tenemos un listado mostrando cientos de productos? Por cada imagen se enviara una peticion para
+                  optimizar la imagen,
+                  al implementar soluciones de carga de imágenes, debemos considerar los posibles impactos en el rendimiento:
                 </p>
                 
                 <div className="bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-500 p-4 mb-6 rounded">
