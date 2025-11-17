@@ -2,11 +2,9 @@ import { BASE_URL } from "../const/constans";
 import { IPagination, ResultType } from "../types/commons";
 import { PokemonDetailResponseType, PokemonListResponseType } from "../types/pokedex";
 
-export async function fetchPokemons(): Promise<ResultType<IPagination<PokemonListResponseType>>> {
-  const url = `${BASE_URL}pokemon?limit=10&offset=0`;
-
+export async function fetchPokemons(offset: number): Promise<ResultType<IPagination<PokemonListResponseType>>> {
+  const url = `${BASE_URL}pokemon?limit=10&offset=${offset}`;
   try {
-
     const response = await fetch(url);
     const data: IPagination<PokemonListResponseType> = await response.json();
 
